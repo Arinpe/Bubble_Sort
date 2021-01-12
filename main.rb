@@ -19,5 +19,5 @@ def bubble_sort(array)
     array
   end
   
-  unsorted_array = [4,3,78,2,0,2]
+  unsorted_array = [4,3,78,2,0,2,]
   p bubble_sort(unsorted_array)
