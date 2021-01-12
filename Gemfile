@@ -1,2 +1,2 @@
 source 'https://rubygems.org'
-gem 'rubocop' '1.8.1'
+gem 'rubocop', '1.8.1'
