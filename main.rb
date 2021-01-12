@@ -5,14 +5,14 @@ def bubble_sort(array)
   loop do
     swapped = false
     (array_length - 1).times do |i|
-        if array[i] > array[i + 1]
-          array[i], array[i + 1] = array[i + 1], array[i]
-          swapped = true
-    end
+      if array[i] > array[i + 1]
+        array[i], array[i + 1] = array[i + 1], array[i]
+        swapped = true
       end
-    break unless swapped
     end
-    array
+    break unless swapped
   end
-  unsorted_array = [4, 3, 78, 2, 0, 2]
-  p bubble_sort(unsorted_array)
+  array
+end
+unsorted_array = [4, 3, 78, 2, 0, 2]
+p bubble_sort(unsorted_array)
