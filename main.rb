@@ -1,23 +1,20 @@
+# bubble-sort
 def bubble_sort(array)
-  array_length = array.size
-  return array if array_length <= 1
+  return array if array.length <= 1
 
-  loop do
-    swapped = false
-    (array_length - 1).times do |i|
-      if array[i] > array[i + 1]
-        array[i], array[i + 1] = array[i + 1], array[i]
-        swapped = true
-      end
+  array.each_index do |index|
+    i = 0
+    while i < array.length - 1 - index
+      array[i], array[i + 1] = array[i + 1], array[i] if array[i] > array[i + 1]
+      i += 1
     end
-    break unless swapped
   end
   array
 end
 unsorted_array = [4, 3, 78, 2, 0, 2]
 p bubble_sort(unsorted_array)
 
-#bubble-sort-by
+# bubble-sort-by
 def bubble_sort_by(arr)
   go_throught_counter = 0
   loop do
@@ -36,6 +33,6 @@ def bubble_sort_by(arr)
   end
   p arr
 end
-bubble_sort_by(%w[hi hello hey]) do |left,right|
+bubble_sort_by(%w[hi hello hey]) do |left, right|
   left.length - right.length
 end
